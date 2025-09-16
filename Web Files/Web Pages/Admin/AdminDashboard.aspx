@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistrationPage.aspx.cs" Inherits="EventManagementSystem.Web_Pages.Web_Pages.Client.RegistrationPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminDashboard.aspx.cs" Inherits="EventManagementSystem.Web_Files.Web_Pages.Admin.AdminDashboard" %>
 
 <!DOCTYPE html>
 

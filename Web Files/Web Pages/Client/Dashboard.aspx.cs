@@ -11,6 +11,7 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Response.Write(Session["UserID"]);
 
         }
     }

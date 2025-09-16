@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EventManagementSystem.Web_Pages.Web_Pages.Client
+namespace EventManagementSystem.Web_Files.Web_Pages.Admin
 {
 
 
-    public partial class RegistrationPage
+    public partial class AdminDashboard
     {
 
         /// <summary>
