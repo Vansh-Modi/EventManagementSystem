@@ -13,7 +13,7 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
     public partial class EventDetail : System.Web.UI.Page
     {
         SqlConnection conn;
-        String strCon;
+        string strCon;
 
         protected void fnConnection()
         {
@@ -110,6 +110,17 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
             lblStatus.Text = rows > 0 ? "Registration successful!" : 
                 "Registration failed. Try again.";
          
+        }
+
+        protected void btnFeedback_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ContactPage.aspx");
+        }
+
+        protected void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Session["UserID"] = null;
+            Response.Redirect("./HomePage.aspx");
         }
     }
 }

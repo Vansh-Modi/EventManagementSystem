@@ -13,7 +13,7 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
     public partial class EventListing : System.Web.UI.Page
     {
         SqlConnection conn;
-        String strCon;
+        string strCon;
 
         protected void fnConnection()
         {
@@ -72,6 +72,10 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
 
             rptEvents.DataSource = dt;
             rptEvents.DataBind();
+        }
+        protected void btnFeedback_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ContactPage.aspx");
         }
     }
 }

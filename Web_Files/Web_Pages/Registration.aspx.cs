@@ -34,7 +34,7 @@ namespace EventManagementSystem.Web_Files.Web_Pages
             string phone = txtNumber.Text.Trim();
             string role = ddlRole.SelectedValue;
 
-            string query = "INSERT INTO tblUsers (Name, Email, Password, Phone, Role) VALUES (@user, @email, @pass, @phone, @role)";
+            string query = "INSERT INTO tblUsers (Name, Email, Password, PhoneNumber, Role) VALUES (@user, @email, @pass, @phone, @role)";
             using (SqlConnection conn = new SqlConnection(cs))
             {
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -51,7 +51,7 @@ namespace EventManagementSystem.Web_Files.Web_Pages
 
                     if (role == "Admin")
                     {
-                        string adminQuery = "INSERT INTO tblAdmin (Name, Email, Password) VALUES (@name, @email, @pass)";
+                        string adminQuery = "INSERT INTO tblAdmin (Username, Email, Password) VALUES (@name, @email, @pass)";
                         SqlCommand adminCmd = new SqlCommand(adminQuery, conn);
                         adminCmd.Parameters.AddWithValue("@name", user);
                         adminCmd.Parameters.AddWithValue("@email", email);
@@ -68,11 +68,11 @@ namespace EventManagementSystem.Web_Files.Web_Pages
                 }
                 catch (Exception ex)
                 {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", $"alert('Error: {ex.Message}');", true);
-                }
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", $"alert('Error: {ex.Message}');", true);
             }
+        }
 
-            btnReset_Click(sender, e);
+        btnReset_Click(sender, e);
         }
 
         protected void btnReset_Click(object sender, EventArgs e)

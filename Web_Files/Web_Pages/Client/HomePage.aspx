@@ -4,13 +4,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link rel="icon" type="image/png" href="~/Web_Files/Images/logoBG.png" />
     <title>Home | Eventra</title>
 </head>
 <body>
     <form id="HomePageForm" runat="server">
         <div class="header">
             <div class="LogoSection">
-                <asp:Image ID="logo" runat="server" Height="50px" ImageUrl="~/Web_Files/Images/logo.png" />Eventra
+                <asp:HyperLink ID="hlLogo" class="Logo" runat="server" ImageUrl="~/Web_Files/Images/logo.png" NavigateUrl="~/Web_Files/Web_Pages/Client/Dashboard.aspx">Eventra</asp:HyperLink>                
             </div>
             <div class="NavigationMenu">
                 <asp:HyperLink ID="DashboardLink" runat="server" NavigateUrl="~/Web_Files/Web_Pages/Client/Dashboard.aspx">Home</asp:HyperLink>
@@ -58,7 +59,7 @@
             <asp:Label ID="lblCopyright" runat="server" Text="Copyright 2025"></asp:Label>
             <asp:HyperLink ID="hlTerms" runat="server" NavigateUrl="~/Web_Files/Web_Pages/HTML_Pages/TnC.html" Target="_search">Terms</asp:HyperLink>
             <asp:HyperLink ID="hlPrivacy" runat="server" NavigateUrl="~/Web_Files/Web_Pages/HTML_Pages/Privacy.html" Target="_search">Privacy</asp:HyperLink>
-            <asp:Button ID="btnFeedback" runat="server" PostBackUrl="~/Web_Files/Web_Pages/Client/ContactPage.aspx" Text="Feedback/Contact Us" />
+            <asp:Button ID="btnFeedback" runat="server" PostBackUrl="~/Web_Files/Web_Pages/Client/ContactPage.aspx" Text="Feedback/Contact Us" OnClick="btnFeedback_Click" />
         </div>
     </form>
     </body>

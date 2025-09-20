@@ -8,7 +8,7 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Admin
     public partial class AdminLoginPage : System.Web.UI.Page
     {
         SqlConnection conn;
-        String strCon;
+        string strCon;
 
         protected void fnConnection()
         {

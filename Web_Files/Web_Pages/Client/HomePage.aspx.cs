@@ -13,7 +13,7 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
     public partial class HomePage : System.Web.UI.Page
     {
         SqlConnection conn;
-        String strCon;
+        string strCon;
 
         protected void fnConnection()
         {
@@ -90,6 +90,11 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
 
             txtSearch.Text = "";
             ddlSearch.ClearSelection();
+        }
+
+        protected void btnFeedback_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ContactPage.aspx");
         }
     }
 }

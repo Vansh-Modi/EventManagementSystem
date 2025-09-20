@@ -3,12 +3,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link rel="icon" type="image/png" href="~/Web_Files/Images/logoBG.png" />
     <title>Log in | Eventra</title>
 </head>
 <body>
     <form id="form1" runat="server">
+        <div class="LogoSection">
+            <asp:HyperLink ID="hlLogo" class="Logo" runat="server" ImageUrl="~/Web_Files/Images/logo.png" NavigateUrl="~/Web_Files/Web_Pages/Client/Dashboard.aspx">Eventra</asp:HyperLink>
+        </div>
         <div class="login-container">
-            <h2>Eventra Login</h2>
+            <h2>Sign-in</h2>
             <asp:ValidationSummary ID="vsLogin" runat="server" CssClass="error-message" />
 
             <label for="txtUserName">Username:</label>
@@ -23,6 +27,7 @@
 
             <div class="register-link">
                 Don't have an account?
+               
                 <asp:HyperLink ID="hlRegister" runat="server" NavigateUrl="~/Web_Files/Web_Pages/Registration.aspx">Register</asp:HyperLink>
             </div>
         </div>
