@@ -24,6 +24,15 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// vsLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsLogin;
+
+        /// <summary>
         /// txtUserName control.
         /// </summary>
         /// <remarks>

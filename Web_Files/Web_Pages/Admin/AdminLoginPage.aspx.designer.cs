@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EventManagementSystem.Web_Files.Web_Pages
+namespace EventManagementSystem.Web_Pages.Web_Pages.Admin
 {
 
 
-    public partial class Registration
+    public partial class AdminLoginPage
     {
 
         /// <summary>
@@ -24,6 +24,15 @@ namespace EventManagementSystem.Web_Files.Web_Pages
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// vsAdminLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsAdminLogin;
+
+        /// <summary>
         /// txtName control.
         /// </summary>
         /// <remarks>
@@ -33,13 +42,13 @@ namespace EventManagementSystem.Web_Files.Web_Pages
         protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
-        /// txtEmail control.
+        /// rfvName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvName;
 
         /// <summary>
         /// txtPassword control.
@@ -51,39 +60,30 @@ namespace EventManagementSystem.Web_Files.Web_Pages
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
         /// <summary>
-        /// txtNumber control.
+        /// rfvPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumber;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPassword;
 
         /// <summary>
-        /// ddlRole control.
+        /// btnLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRole;
+        protected global::System.Web.UI.WebControls.Button btnLogin;
 
         /// <summary>
-        /// btnRegister control.
+        /// hlRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegister;
-
-        /// <summary>
-        /// btnReset control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReset;
+        protected global::System.Web.UI.WebControls.HyperLink hlRegister;
     }
 }

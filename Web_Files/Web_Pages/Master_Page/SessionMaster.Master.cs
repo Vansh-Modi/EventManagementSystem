@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace EventManagementSystem.Web_Pages.Web_Pages.Client
+namespace EventManagementSystem.Web_Files.Web_Pages.Master_Page
 {
-    public partial class EventListing : System.Web.UI.Page
+    public partial class SessionMaster : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
