@@ -159,6 +159,15 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
         protected global::System.Web.UI.WebControls.Button btnEditProfile;
 
         /// <summary>
+        /// btnChangePassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnChangePassword;
+
+        /// <summary>
         /// lblValidator control.
         /// </summary>
         /// <remarks>
@@ -186,6 +195,24 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
         protected global::System.Web.UI.WebControls.TextBox txtEditName;
 
         /// <summary>
+        /// lblOldPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblOldPassword;
+
+        /// <summary>
+        /// txtOldPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtOldPassword;
+
+        /// <summary>
         /// lblEditEmail control.
         /// </summary>
         /// <remarks>
@@ -202,6 +229,24 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEditEmail;
+
+        /// <summary>
+        /// lblNewPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNewPassword;
+
+        /// <summary>
+        /// txtNewPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNewPassword;
 
         /// <summary>
         /// lblEditNumber control.
@@ -222,6 +267,24 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
         protected global::System.Web.UI.WebControls.TextBox txtEditPhone;
 
         /// <summary>
+        /// lblConfirmPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblConfirmPass;
+
+        /// <summary>
+        /// txtConfirmPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtConfirmPass;
+
+        /// <summary>
         /// btnSaveProfile control.
         /// </summary>
         /// <remarks>
@@ -229,6 +292,15 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSaveProfile;
+
+        /// <summary>
+        /// btnSavePassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSavePassword;
 
         /// <summary>
         /// btnCancelEdit control.

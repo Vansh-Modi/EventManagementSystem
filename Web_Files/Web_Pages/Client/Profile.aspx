@@ -46,18 +46,29 @@
                 </p>
                 <asp:Button ID="btnEditProfile" runat="server" Text="Update Information" OnClick="btnEditProfile_Click" />
 
+                <asp:Button ID="btnChangePassword" runat="server" OnClick="btnChangePassword_Click" Text="Change Password" />
+
             </div>
             <div class="Profile-Upadate">
                 <p><asp:Label ID="lblValidator" runat="server" Text=""></asp:Label></p>
                 <p><asp:Label ID="lblEditName" runat="server" Text="Name : " Visible="False"></asp:Label>                   
                     <asp:TextBox ID="txtEditName" runat="server" Visible="False" />
+                    <asp:Label ID="lblOldPassword" runat="server" Text="Old Password : " Visible="False"></asp:Label>                   
+                    <asp:TextBox ID="txtOldPassword" runat="server" Visible="False" />
                 </p>
                 <p><asp:Label ID="lblEditEmail" runat="server" Text="Email : " Visible="False"></asp:Label> 
-                    <asp:TextBox ID="txtEditEmail" runat="server" Visible="False" TextMode="Email" /></p>
+                    <asp:TextBox ID="txtEditEmail" runat="server" Visible="False" TextMode="Email" />
+                    <asp:Label ID="lblNewPassword" runat="server" Text="New Password : " Visible="False"></asp:Label>                   
+                    <asp:TextBox ID="txtNewPassword" runat="server" Visible="False" TextMode="Password" />
+                </p>
                 <p><asp:Label ID="lblEditNumber" runat="server" Text="Phone Number : " Visible="False"></asp:Label> 
-                    <asp:TextBox ID="txtEditPhone" runat="server" Visible="False" TextMode="Number" /></p>
+                    <asp:TextBox ID="txtEditPhone" runat="server" Visible="False" TextMode="Number" />
+                    <asp:Label ID="lblConfirmPass" runat="server" Text="Confirm Password : " Visible="False"></asp:Label>                   
+                    <asp:TextBox ID="txtConfirmPass" runat="server" Visible="False" TextMode="Password" />
+                </p>
 
                 <asp:Button ID="btnSaveProfile" runat="server" Text="Save" Visible="False" OnClick="btnSaveProfile_Click" />
+                <asp:Button ID="btnSavePassword" runat="server" OnClick="btnSavePassword_Click" Text="Save Password" Visible="False" />
                 <asp:Button ID="btnCancelEdit" runat="server" Text="Cancel" Visible="False" OnClick="btnCancelEdit_Click" />
                 <asp:Button ID="btnResetEdit" runat="server" Text="Reset" Visible="False" OnClick="btnResetEdit_Click" />
             </div>

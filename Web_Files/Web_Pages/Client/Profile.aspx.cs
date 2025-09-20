@@ -144,10 +144,21 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
             txtEditEmail.Visible = false;
             txtEditPhone.Visible = false;
 
+            btnChangePassword.Visible = true;
             btnEditProfile.Visible = true;
+
+            btnSavePassword.Visible = false;
             btnSaveProfile.Visible = false;
             btnCancelEdit.Visible = false;
             btnResetEdit.Visible = false;
+
+            txtOldPassword.Visible = false;
+            txtNewPassword.Visible = false;
+            txtConfirmPass.Visible = false;
+
+            lblOldPassword.Visible = false;
+            lblNewPassword.Visible = false;
+            lblConfirmPass.Visible = false;
 
             lblValidator.Text = "";
         }
@@ -157,6 +168,79 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
             txtEditName.Text = "";
             txtEditEmail.Text = "";
             txtEditPhone.Text = "";
+            txtNewPassword.Text = "";
+            txtConfirmPass.Text = "";
+        }
+
+        protected void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(strCon);
+            conn.Open();
+            string query = "SELECT * FROM tblUsers WHERE UserID = @userId";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@userId", Session["UserID"].ToString());
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read()){
+                txtOldPassword.Text = reader["Password"].ToString();
+            }
+
+            txtOldPassword.Visible = true;
+            txtNewPassword.Visible = true;
+            txtConfirmPass.Visible = true;
+            lblOldPassword.Visible = true;
+            lblNewPassword.Visible = true;
+            lblConfirmPass.Visible = true;
+
+            btnChangePassword.Visible = false;
+            btnSavePassword.Visible = true;
+            btnCancelEdit.Visible = true;
+            btnResetEdit.Visible = true;
+        }
+
+        protected void btnSavePassword_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection( strCon);
+            conn.Open();
+            string newPassword = txtNewPassword.Text.Trim();
+            string confirmPassword = txtConfirmPass.Text.Trim();
+
+            if (newPassword == "")
+            {
+                lblValidator.Text = "Password Cannot Be Empty";
+            }
+            else if (newPassword != confirmPassword)
+            {
+                lblValidator.Text = "Password Missmatch !";
+                return;
+            }
+            else if (txtOldPassword.Text == newPassword)
+            {
+                lblValidator.Text = "Cannot enter same Password !";
+                return;
+            }
+            else
+            {
+                string query = "UPDATE tblUsers SET Password = @newPass WHERE UserID = @userId";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@newPass", newPassword);
+                cmd.Parameters.AddWithValue("@userId", Session["UserID"].ToString());
+                cmd.ExecuteNonQuery();
+                lblValidator.Text = "Password Updated !";
+                btnChangePassword.Visible = true;
+                btnSavePassword.Visible = false;
+                btnCancelEdit.Visible = false;
+                btnResetEdit.Visible = false;
+
+                txtOldPassword.Visible = false;
+                txtNewPassword.Visible = false;
+                txtConfirmPass.Visible = false;
+
+                lblOldPassword.Visible = false;
+                lblNewPassword.Visible = false;
+                lblConfirmPass.Visible = false;
+                lblValidator.Text = "";
+            }
+            btnResetEdit_Click(sender, e);
         }
     }
 }
