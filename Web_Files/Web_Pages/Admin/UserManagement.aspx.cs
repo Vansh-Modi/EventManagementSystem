@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace EventManagementSystem.Web_Pages.Web_Pages.Admin
+namespace EventManagementSystem.Web_Files.Web_Pages.Admin
 {
     public partial class UserManagement : System.Web.UI.Page
     {

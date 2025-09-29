@@ -11,43 +11,43 @@ namespace EventManagementSystem.Web_Files.Web_Pages.Admin
 {
 
 
-    public partial class AdminDashboard
+    public partial class ManageCategories
     {
 
         /// <summary>
-        /// lblTotalEvents control.
+        /// pnlCategoryManagement control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotalEvents;
+        protected global::System.Web.UI.WebControls.Panel pnlCategoryManagement;
 
         /// <summary>
-        /// lblTotalRegistrations control.
+        /// txtNewCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotalRegistrations;
+        protected global::System.Web.UI.WebControls.TextBox txtNewCategory;
 
         /// <summary>
-        /// lblTotalFeedback control.
+        /// btnAddCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotalFeedback;
+        protected global::System.Web.UI.WebControls.Button btnAddCategory;
 
         /// <summary>
-        /// lblTotalUsers control.
+        /// gvCategories control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotalUsers;
+        protected global::System.Web.UI.WebControls.GridView gvCategories;
     }
 }

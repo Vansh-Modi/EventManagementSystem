@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
-namespace EventManagementSystem.Web_Pages.Web_Pages.Admin
+namespace EventManagementSystem.Web_Files.Web_Pages.Admin
 {
     public partial class AdminLoginPage : System.Web.UI.Page
     {

@@ -44,24 +44,25 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
 
         protected void btnSubmitFeedback_Click(object sender, EventArgs e)
         {
-            string Name = txtName.Text;
-            string Email = txtEmail.Text;
-            string Message = txtMessage.Text;
-            if(txtName.Text == "" || txtEmail.Text == "" || txtMessage.Text == "")
+            string message = txtMessage.Text.Trim();
+
+            if (string.IsNullOrEmpty(message))
             {
-                lblFeedbackMessage.Text = "Please fill in all fields.";
+                lblFeedbackMessage.Text = "Please enter your feedback.";
                 return;
             }
-            string query = "INSERT INTO tblReview (Name, Email, Comments) " +
-                "VALUES (@Name, @Email, @Message)";
+            int userId = Convert.ToInt32(Session["UserID"]);
+
+            SqlConnection conn = new SqlConnection(strCon);
+            conn.Open();
+            string query = @"INSERT INTO tblFeedback (UserID, Comments, SubmittedAt)
+                        VALUES (@UserID, @Comments, @SubmittedAt)";
             SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@Name", Name);
-            cmd.Parameters.AddWithValue("@Email", Email);
-            cmd.Parameters.AddWithValue("@Message", Message);
+            cmd.Parameters.AddWithValue("@UserID", userId);
+            cmd.Parameters.AddWithValue("@Comments", message);
+            cmd.Parameters.AddWithValue("@SubmittedAt", DateTime.Now);
             cmd.ExecuteNonQuery();
             lblFeedbackMessage.Text = "Thank you for your feedback!";
-            txtName.Text = "";
-            txtEmail.Text = "";
             txtMessage.Text = "";
         }
     }

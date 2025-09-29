@@ -7,128 +7,155 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EventManagementSystem.Web_Files.Web_Pages.Admin
+namespace EventManagementSystem.Web_Files.Web_Pages.Master_Page
 {
 
 
-    public partial class Settings
+    public partial class AdminMasterPage
     {
 
         /// <summary>
-        /// pnlBranding control.
+        /// head control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlBranding;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
         /// <summary>
-        /// txtSiteTitle control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSiteTitle;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// txtFooterText control.
+        /// hlLogo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFooterText;
+        protected global::System.Web.UI.WebControls.HyperLink hlLogo;
 
         /// <summary>
-        /// fuLogo control.
+        /// imgLogo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuLogo;
+        protected global::System.Web.UI.WebControls.Image imgLogo;
 
         /// <summary>
-        /// btnUploadLogo control.
+        /// DashboardLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUploadLogo;
+        protected global::System.Web.UI.WebControls.HyperLink DashboardLink;
 
         /// <summary>
-        /// imgLogoPreview control.
+        /// EventMgtLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgLogoPreview;
+        protected global::System.Web.UI.WebControls.HyperLink EventMgtLink;
 
         /// <summary>
-        /// btnSaveBranding control.
+        /// UserMgtlike control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveBranding;
+        protected global::System.Web.UI.WebControls.HyperLink UserMgtlike;
 
         /// <summary>
-        /// pnlAdminProfile control.
+        /// ReportsLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlAdminProfile;
+        protected global::System.Web.UI.WebControls.HyperLink ReportsLink;
 
         /// <summary>
-        /// txtAdminName control.
+        /// SettingsLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAdminName;
+        protected global::System.Web.UI.WebControls.HyperLink SettingsLink;
 
         /// <summary>
-        /// txtAdminEmail control.
+        /// FeedBackLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAdminEmail;
+        protected global::System.Web.UI.WebControls.HyperLink FeedBackLink;
 
         /// <summary>
-        /// txtNewPassword control.
+        /// imgLogoutBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNewPassword;
+        protected global::System.Web.UI.WebControls.ImageButton imgLogoutBtn;
 
         /// <summary>
-        /// btnUpdateProfile control.
+        /// ContentPlaceHolder1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdateProfile;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
 
         /// <summary>
-        /// lblSettingsStatus control.
+        /// lblFooterText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSettingsStatus;
+        protected global::System.Web.UI.WebControls.Label lblFooterText;
+
+        /// <summary>
+        /// hlAdminTerms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlAdminTerms;
+
+        /// <summary>
+        /// hlAdminPrivacy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlAdminPrivacy;
+
+        /// <summary>
+        /// hlAdminContact control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlAdminContact;
     }
 }

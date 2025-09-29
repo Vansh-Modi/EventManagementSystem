@@ -39,14 +39,6 @@
             <asp:Label ID="lblFeedbackMessage" runat="server" ForeColor="Red"></asp:Label>
             <table>
                 <tr>
-                    <td><asp:Label ID="lblName" runat="server" Text="Name:"></asp:Label></td>
-                    <td><asp:TextBox ID="txtName" runat="server"></asp:TextBox></td>
-                </tr>
-                <tr>
-                    <td><asp:Label ID="lblEmail" runat="server" Text="Email:"></asp:Label></td>
-                    <td><asp:TextBox ID="txtEmail" runat="server"></asp:TextBox></td>
-                </tr>
-                <tr>
                     <td><asp:Label ID="lblMessage" runat="server" Text="Message:"></asp:Label></td>
                     <td><asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="5" Columns="30"></asp:TextBox></td>
                 </tr>

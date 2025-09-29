@@ -11,7 +11,7 @@ namespace EventManagementSystem.Web_Files.Web_Pages.Master_Page
 {
 
 
-    public partial class PublicMaster
+    public partial class Site1
     {
 
         /// <summary>

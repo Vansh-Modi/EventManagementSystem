@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace EventManagementSystem.Web_Files.Web_Pages.Admin
@@ -59,7 +63,7 @@ namespace EventManagementSystem.Web_Files.Web_Pages.Admin
             da.Fill(dt);
             gvEvents.DataSource = dt;
             gvEvents.DataBind();
-            
+
         }
 
         protected void btnAddEvent_Click(object sender, EventArgs e)
