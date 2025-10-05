@@ -17,3 +17,12 @@ Eventra is a modular, full-stack event management system designed for administra
 - **Database**: SQL Server
 - **Libraries**: iTextSharp (PDF export), ADO.NET
 - **Tools**: Visual Studio, Git
+
+## How to Run
+1. Clone the repository  
+2. Open in Visual Studio  
+3. Configure your SQL Server connection string in `Web.config`  
+4. Run the project using IIS Express
+
+## Author
+**Vansh** — BScIT student, full-stack architect at heart, passionate about building scalable admin tools and clean UI workflows.
