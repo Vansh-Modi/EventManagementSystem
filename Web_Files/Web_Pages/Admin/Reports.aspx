@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="Reports | Eventra" Language="C#" MasterPageFile="~/Web_Files/Web_Pages/Master_Page/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="Reports.aspx.cs" Inherits="EventManagementSystem.Web_Files.Web_Pages.Admin.Reports" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link rel="stylesheet" type="text/css" href="../Master_Page/index.css" />
+    <link rel="stylesheet" type="text/css" href="../../Styles/Admin/reports.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -22,7 +24,7 @@
                 <h3>Event: </h3>
                 <p>
                     Select Category:<br />
-                    <asp:DropDownList ID="ddlEventCategory" runat="server" AutoPostBack="True" Style="height: 25px" OnSelectedIndexChanged="ddlEventCategory_SelectedIndexChanged">
+                    <asp:DropDownList ID="ddlEventCategory" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlEventCategory_SelectedIndexChanged">
                     </asp:DropDownList><br />
                 </p>
                 <p>

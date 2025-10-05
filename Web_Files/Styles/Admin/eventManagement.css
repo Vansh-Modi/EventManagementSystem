@@ -1,2 +1,167 @@
 ﻿body {
+    background-color: #F9F9F9;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 30px 0;
+    color: #0078D7;
+}
+
+#lblMessage {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    border-collapse: collapse;
+}
+
+    table td {
+        padding: 10px;
+        vertical-align: top;
+        font-size: 15px;
+    }
+
+        table td:first-child {
+            font-weight: 500;
+            color: #555;
+            width: 150px;
+        }
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea,
+select,
+.aspNetTextBox,
+.aspNetDropDown {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#hlManageCategories {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #0078D7;
+    text-decoration: none;
+}
+
+    #hlManageCategories:hover {
+        text-decoration: underline;
+    }
+
+input[type="submit"],
+input[type="button"],
+button,
+.aspNetButton {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    input[type="submit"]:hover,
+    input[type="button"]:hover,
+    button:hover,
+    .aspNetButton:hover {
+        background-color: #005A9E;
+    }
+
+.gvEvent {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto 60px;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+    .gvEvent th,
+    .gvEvent td {
+        padding: 12px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    .gvEvent th {
+        background-color: #0078D7;
+        color: white;
+        font-weight: 600;
+    }
+
+    .gvEvent td {
+        font-size: 15px;
+        color: #333;
+    }
+
+    .gvEvent tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .gvEvent tr:hover {
+        background-color: #e6f0ff;
+        transition: background-color 0.3s ease;
+    }
+
+    .gvEvent a,
+    .gvEvent .aspNetLinkButton {
+        color: #FF6B35;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .gvEvent a:hover,
+        .gvEvent .aspNetLinkButton:hover {
+            text-decoration: underline;
+        }
+
+@media screen and (max-width: 768px) {
+    table td {
+        display: block;
+        width: 100%;
+    }
+
+        table td:first-child {
+            margin-top: 10px;
+        }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+    }
+
+    .gvEvent th,
+    .gvEvent td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    input[type="submit"],
+    input[type="button"],
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }

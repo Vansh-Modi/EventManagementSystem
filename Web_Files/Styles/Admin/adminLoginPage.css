@@ -1,2 +1,80 @@
 ﻿body {
+    background-color: #F9F9F9;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
 }
+
+.login-container {
+    max-width: 400px;
+    margin: 60px auto;
+    background-color: #FFFFFF;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.login-header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #0078D7;
+}
+
+.inputText {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"],
+.login-container input,
+.login-container .aspNetTextBox {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn:hover {
+        background-color: #005A9E;
+    }
+
+.error-message {
+    color: #DC3545;
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.register-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+    .register-link a {
+        color: #FF6B35;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }

@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace EventManagementSystem.Web_Pages.Web_Pages.Client
+namespace EventManagementSystem.Web_Files.Web_Pages.Client
 {
     public partial class EventDetail : System.Web.UI.Page
     {
@@ -25,6 +24,11 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
         protected void Page_Load(object sender, EventArgs e)
         {
             fnConnection();
+            if (Session["UserID"] == null)
+            {
+                Response.Redirect("./LoginPage.aspx");
+                return;
+            }
             if (!IsPostBack)
             {
                 fnPrintLabelDetails();
@@ -43,9 +47,9 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
 
             string query = @"
             SELECT E.Title, E.Description, E.Date, E.Time, 
-            E.Location, E.Capacity, E.ImageUrl, C.CategoryName
-            FROM tblEvents E
-            JOIN tblCategories C ON E.CategoryID = C.CategoryID
+            E.Location, E.Capacity, C.CategoryName
+            FROM tblEvent E
+            JOIN tblCategory C ON E.CategoryID = C.CategoryID
             WHERE E.EventID = @EventID";
 
             SqlConnection conn = new SqlConnection(strCon);
@@ -63,7 +67,6 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
                 lblLocation.Text = reader["Location"].ToString();
                 lblCapacity.Text = reader["Capacity"].ToString();
                 lblCategory.Text = reader["CategoryName"].ToString();
-                imgEventBanner.ImageUrl = reader["ImageUrl"].ToString();
             }
             else
             {
@@ -99,17 +102,17 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
                 return;
             }
 
-            string insertQuery = "INSERT INTO tblRegistrations (UserID, EventID, RegistrationDate) " +
-                                 "VALUES (@UserID, @EventID, @Date)";
+            string insertQuery = "INSERT INTO tblRegistrations (UserID, EventID, ResisterdAt,Status) " +
+                                 "VALUES (@UserID, @EventID, @Date, @Status)";
             SqlCommand insertCmd = new SqlCommand(insertQuery, conn);
             insertCmd.Parameters.AddWithValue("@UserID", userId);
             insertCmd.Parameters.AddWithValue("@EventID", eventId);
             insertCmd.Parameters.AddWithValue("@Date", DateTime.Now);
-
+            insertCmd.Parameters.AddWithValue("@Status", "Confirmed");
             int rows = insertCmd.ExecuteNonQuery();
-            lblStatus.Text = rows > 0 ? "Registration successful!" : 
+            lblStatus.Text = rows > 0 ? "Registration successful!" :
                 "Registration failed. Try again.";
-         
+
         }
 
         protected void btnFeedback_Click(object sender, EventArgs e)

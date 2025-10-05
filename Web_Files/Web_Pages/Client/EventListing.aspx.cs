@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace EventManagementSystem.Web_Pages.Web_Pages.Client
+namespace EventManagementSystem.Web_Files.Web_Pages.Client
 {
     public partial class EventListing : System.Web.UI.Page
     {
@@ -24,6 +24,7 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            int User = Convert.ToInt16(Session["UserID"]);
             fnConnection();
             if (!IsPostBack)
             {

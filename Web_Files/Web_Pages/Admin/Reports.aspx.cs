@@ -26,13 +26,14 @@ namespace EventManagementSystem.Web_Files.Web_Pages.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             fnConnection();
-            if (!IsPostBack)
+            if (!Page.IsPostBack)
             {
                 if (Session["adminID"] == null)
                 {
                     Response.Redirect("AdminLoginPage.aspx");
                     return;
                 }
+
             }
         }
         protected void rblReportFilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -44,6 +45,7 @@ namespace EventManagementSystem.Web_Files.Web_Pages.Admin
                 FeedbackFilter.Visible = false;
                 RegistrationFilter.Visible = false;
                 BindEventCategories();
+                ddlEventCategory_SelectedIndexChanged(sender, e);
             }
             else if (rblReportFilter.SelectedValue == "User")
             {
@@ -68,16 +70,16 @@ namespace EventManagementSystem.Web_Files.Web_Pages.Admin
                 RegistrationFilter.Visible = false;
             }
         }
-        protected void BindRegisterdEvent()
+        protected void BindEventCategories()
         {
-            fnConnection();
-            SqlCommand cmd = new SqlCommand("SELECT CategoryID, CategoryName FROM tblCategory", conn);
-            ddlRegEventCategory.DataSource = cmd.ExecuteReader();
-            ddlRegEventCategory.DataTextField = "CategoryName";
-            ddlRegEventCategory.DataValueField = "CategoryID";
-            ddlRegEventCategory.DataBind();
-            ddlRegEventCategory.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--All Categories--", "0"));
-            conn.Close();
+            SqlConnection conn = new SqlConnection(strcon);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT CategoryID , CategoryName FROM tblCategory", conn);
+            ddlEventCategory.DataSource = cmd.ExecuteReader();
+            ddlEventCategory.DataTextField = "CategoryName";
+            ddlEventCategory.DataValueField = "CategoryID";
+            ddlEventCategory.DataBind();
+            ddlEventCategory.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--All Categories--", "0"));
         }
         protected void ddlEventCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -101,22 +103,19 @@ namespace EventManagementSystem.Web_Files.Web_Pages.Admin
             ddlEventLocation.DataTextField = "Location";
             ddlEventLocation.DataValueField = "Location";
             ddlEventLocation.DataBind();
-            ddlEventCategory.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--Select Category--", "0"));
+            ddlEventLocation.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--Select Category--", "0"));
         }
-        protected void BindEventCategories()
+        protected void BindRegisterdEvent()
         {
             SqlConnection conn = new SqlConnection(strcon);
             conn.Open();
-            SqlCommand cmd = new SqlCommand("SELECT CategoryID , CategoryName FROM tblCategory", conn);
-            ddlEventCategory.DataSource = cmd.ExecuteReader();
-            ddlEventCategory.DataTextField = "CategoryName";
-            ddlEventCategory.DataValueField = "CategoryID";
-            ddlEventCategory.DataBind();
-            ddlEventCategory.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--Select Category--", "0"));
-        }
-        protected void ddlEventLocation_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
+            SqlCommand cmd = new SqlCommand("SELECT CategoryID, CategoryName FROM tblCategory", conn);
+            ddlRegEventCategory.DataSource = cmd.ExecuteReader();
+            ddlRegEventCategory.DataTextField = "CategoryName";
+            ddlRegEventCategory.DataValueField = "CategoryID";
+            ddlRegEventCategory.DataBind();
+            ddlRegEventCategory.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--All Categories--", "0"));
+            conn.Close();
         }
         protected void btnGenerateEventReport_Click(object sender, EventArgs e)
         {
@@ -387,35 +386,6 @@ namespace EventManagementSystem.Web_Files.Web_Pages.Admin
             btnExportPDF.Enabled = feedbackList.Count > 0;
 
         }
-        public class EventReportItem
-        {
-            public int EventID { get; set; }
-            public string Title { get; set; }
-            public string Description { get; set; }
-            public string Location { get; set; }
-            public DateTime Date { get; set; }
-            public int Capacity { get; set; }
-            public string CategoryName { get; set; }
-            public string AdminName { get; set; }
-            public int Registrations { get; set; }
-        }
-        public class UserReportItem
-        {
-            public int UserID { get; set; }
-            public string Name { get; set; }
-            public string Email { get; set; }
-            public string Role { get; set; }
-        }
-        public class RegisteredEventItem
-        {
-            public int RegistrationID { get; set; }
-            public string UserName { get; set; }
-            public string Email { get; set; }
-            public string EventName { get; set; }
-            public string Location { get; set; }
-            public DateTime EventDate { get; set; }
-            public string CategoryName { get; set; }
-        }
         protected void btnExportExcel_Click(object sender, EventArgs e)
         {
             Response.Clear();
@@ -464,7 +434,38 @@ namespace EventManagementSystem.Web_Files.Web_Pages.Admin
         {
          
         }
+        protected void ddlEventLocation_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-        
+        }
+        public class EventReportItem
+        {
+            public int EventID { get; set; }
+            public string Title { get; set; }
+            public string Description { get; set; }
+            public string Location { get; set; }
+            public DateTime Date { get; set; }
+            public int Capacity { get; set; }
+            public string CategoryName { get; set; }
+            public string AdminName { get; set; }
+            public int Registrations { get; set; }
+        }
+        public class UserReportItem
+        {
+            public int UserID { get; set; }
+            public string Name { get; set; }
+            public string Email { get; set; }
+            public string Role { get; set; }
+        }
+        public class RegisteredEventItem
+        {
+            public int RegistrationID { get; set; }
+            public string UserName { get; set; }
+            public string Email { get; set; }
+            public string EventName { get; set; }
+            public string Location { get; set; }
+            public DateTime EventDate { get; set; }
+            public string CategoryName { get; set; }
+        }
     }
 }

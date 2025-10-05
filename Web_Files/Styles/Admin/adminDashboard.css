@@ -1,0 +1,49 @@
+﻿.DashboardSummary {
+    height: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #FFFFFF;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    color: #333;
+}
+
+    .DashboardSummary h2 {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 25px;
+        color: #0078D7;
+        text-align: center;
+    }
+
+    .DashboardSummary p {
+        font-size: 16px;
+        margin-bottom: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 8px;
+    }
+
+        .DashboardSummary p dashboard-labels {
+            font-weight: bold;
+            color: #FF6B35;
+        }
+
+@media screen and (max-width: 768px) {
+    .DashboardSummary {
+        padding: 20px;
+    }
+
+        .DashboardSummary h2 {
+            font-size: 22px;
+        }
+
+        .DashboardSummary p {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+}

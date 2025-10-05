@@ -1,2 +1,124 @@
 ﻿body {
+    background-color: #F9F9F9;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    color: #333;
+}
+
+.welcomeSection {
+    max-width: 800px;
+    margin: 40px auto 20px;
+    text-align: center;
+}
+
+    .welcomeSection h2 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #0078D7;
+    }
+
+.RegistrationSection {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+    .RegistrationSection h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        color: #0078D7;
+    }
+
+.eventCard {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+    .eventCard h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #FF6B35;
+    }
+
+    .eventCard p {
+        margin: 5px 0;
+        font-size: 15px;
+    }
+
+    .eventCard strong {
+        color: #555;
+    }
+
+    .eventCard .aspNetButton,
+    .eventCard input[type="submit"],
+    .eventCard input[type="button"],
+    .eventCard button {
+        margin-top: 10px;
+        padding: 8px 16px;
+        background-color: #DC3545;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .eventCard .aspNetButton:hover,
+        .eventCard input[type="submit"]:hover,
+        .eventCard input[type="button"]:hover,
+        .eventCard button:hover {
+            background-color: #b02a37;
+        }
+
+.dashboard-notifications {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+    .dashboard-notifications h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        color: #0078D7;
+    }
+
+    .dashboard-notifications p {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .dashboard-notifications strong {
+        color: #555;
+    }
+
+@media screen and (max-width: 768px) {
+    .RegistrationSection,
+    .dashboard-notifications,
+    .welcomeSection {
+        padding: 20px;
+    }
+
+    .eventCard {
+        padding: 15px;
+    }
+
+        .eventCard h4 {
+            font-size: 18px;
+        }
+
+    .dashboard-notifications h3,
+    .RegistrationSection h3,
+    .welcomeSection h2 {
+        font-size: 20px;
+    }
 }

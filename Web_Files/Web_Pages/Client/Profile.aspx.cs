@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace EventManagementSystem.Web_Pages.Web_Pages.Client
+namespace EventManagementSystem.Web_Files.Web_Pages.Client
 {
     public partial class Profile : System.Web.UI.Page
     {
@@ -55,7 +55,7 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
             SqlConnection conn = new SqlConnection(strCon);
             conn.Open();
             string query = "SELECT * FROM tblUsers WHERE UserID = @userId";
-            SqlCommand cmd = new SqlCommand(query,conn);
+            SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@userId", userId);
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
@@ -89,7 +89,7 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
             txtEditEmail.Text = lblDisplayEmail.Text;
             txtEditPhone.Text = lblDisplayNumber.Text;
         }
-        
+
         protected void btnSaveProfile_Click(object sender, EventArgs e)
         {
             string UID = Session["UserID"].ToString();
@@ -180,7 +180,8 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@userId", Session["UserID"].ToString());
             SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.Read()){
+            if (reader.Read())
+            {
                 txtOldPassword.Text = reader["Password"].ToString();
             }
 
@@ -199,7 +200,7 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
 
         protected void btnSavePassword_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection( strCon);
+            SqlConnection conn = new SqlConnection(strCon);
             conn.Open();
             string newPassword = txtNewPassword.Text.Trim();
             string confirmPassword = txtConfirmPass.Text.Trim();

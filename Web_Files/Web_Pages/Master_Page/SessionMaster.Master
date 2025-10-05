@@ -5,14 +5,43 @@
 <html>
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="../../Styles/Client/sessionMaster.css" />
+    <link rel="icon" type="image/png" href="/Web_Files/Images/logoBG.png" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
+        <div class="header">
+            <div class="LogoSection">
+                <asp:HyperLink ID="hlLogo" CssClass="Logo" runat="server" NavigateUrl="~/Web_Files/Web_Pages/Client/Dashboard.aspx">
+         <asp:Image ID="imgLogo" runat="server" Width="100px" /></asp:HyperLink>
+            </div>
+            <div class="NavigationMenu">
+                <asp:HyperLink ID="DashboardLink" runat="server" NavigateUrl="~/Web_Files/Web_Pages/Client/Dashboard.aspx">Dashboard</asp:HyperLink>
+                <asp:HyperLink ID="HomeLink" runat="server" NavigateUrl="~/Web_Files/Web_Pages/Client/HomePage.aspx">Home</asp:HyperLink>
+                <asp:HyperLink ID="EventListLink" runat="server" NavigateUrl="~/Web_Files/Web_Pages/Client/EventListing.aspx">Event List</asp:HyperLink>
+                <%--<asp:HyperLink ID="EventDetailLink" runat="server" NavigateUrl="~/Web_Files/Web_Pages/Client/EventDetail.aspx">Event Details</asp:HyperLink>--%>
+                <asp:HyperLink ID="ProfileLink" runat="server" NavigateUrl="~/Web_Files/Web_Pages/Client/Profile.aspx">Profile</asp:HyperLink>
+                <asp:HyperLink ID="FeedBackLink" runat="server" NavigateUrl="~/Web_Files/Web_Pages/Client/ContactPage.aspx">Contact US</asp:HyperLink>
+            </div>
+            <div class="LogOutBtn">
+                <asp:ImageButton ID="imgLogoutBtn" runat="server" ImageUrl="~/Web_Files/Images/LogoutButton.png" PostBackUrl="~/Web_Files/Web_Pages/Client/LoginPage.aspx" OnClick="imgLogoutBtn_Click" CausesValidation="False"  />
+            </div>
+        </div>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
+        </div>
+                <div class="FooterSection">
+            <asp:Label ID="lblFooterText" runat="server" />
+            &nbsp;|&nbsp;
+            <asp:HyperLink ID="hlAdminTerms" runat="server" NavigateUrl="~/Web_Files/Web_Pages/HTML_Pages/TnC.html" Target="_search">Terms</asp:HyperLink>
+            &nbsp;|&nbsp;
+            <asp:HyperLink ID="hlAdminPrivacy" runat="server" NavigateUrl="~/Web_Files/Web_Pages/HTML_Pages/Privacy.html" Target="_search">Privacy</asp:HyperLink>
+            &nbsp;|&nbsp;
+            <asp:HyperLink ID="hlContactFeedback" runat="server" NavigateUrl="~/Web_Files/Web_Pages/Client/ContactPage.aspx">Contact Support</asp:HyperLink>
         </div>
     </form>
 </body>

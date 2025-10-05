@@ -1,2 +1,118 @@
 ﻿body {
+    background-color: #F9F9F9;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.event-details-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.event-banner {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.banner-img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.event-banner h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #0078D7;
+}
+
+.category-badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #FF6B35;
+    color: white;
+    font-size: 14px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.event-info p {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.event-info strong {
+    color: #555;
+}
+
+.event-description {
+    margin-top: 30px;
+}
+
+    .event-description h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #0078D7;
+    }
+
+    .event-description .aspNetLabel {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #444;
+    }
+
+.event-register {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.register-btn {
+    padding: 10px 20px;
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .register-btn:hover {
+        background-color: #005A9E;
+    }
+
+.status-label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #DC3545;
+}
+
+@media screen and (max-width: 768px) {
+    .event-details-container {
+        padding: 20px;
+    }
+
+    .event-banner h1 {
+        font-size: 24px;
+    }
+
+    .event-description h3 {
+        font-size: 18px;
+    }
+
+    .register-btn {
+        width: 100%;
+    }
 }

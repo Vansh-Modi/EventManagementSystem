@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace EventManagementSystem.Web_Pages.Web_Pages.Client
+namespace EventManagementSystem.Web_Files.Web_Pages.Client
 {
     public partial class HomePage : System.Web.UI.Page
     {
@@ -25,6 +25,7 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
         protected void Page_Load(object sender, EventArgs e)
         {
             fnConnection();
+            int User = Convert.ToInt16(Session["UserID"]);
             if (!IsPostBack)
             {
                 fnBindDDLSearch();
@@ -41,7 +42,7 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
             ddlSearch.DataTextField = "CategoryName";
             ddlSearch.DataBind();
             ddlSearch.Items.Insert(0, new ListItem("--Select Category--", "0"));
-            
+
         }
 
         protected void fnBindFeaturedEvents()

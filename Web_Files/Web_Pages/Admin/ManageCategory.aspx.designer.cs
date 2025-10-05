@@ -7,38 +7,47 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EventManagementSystem.Web_Files.Web_Pages.Master_Page
+namespace EventManagementSystem.Web_Files.Web_Pages.Admin
 {
 
 
-    public partial class Site1
+    public partial class ManageCategory
     {
 
         /// <summary>
-        /// head control.
+        /// pnlCategoryManagement control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Panel pnlCategoryManagement;
 
         /// <summary>
-        /// form1 control.
+        /// txtNewCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox txtNewCategory;
 
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// btnAddCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button btnAddCategory;
+
+        /// <summary>
+        /// gvCategories control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvCategories;
     }
 }

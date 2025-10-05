@@ -1,2 +1,137 @@
-﻿body {
+﻿/* Base Styles */
+body {
+    background-color: #F9F9F9;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    color: #333;
+}
+
+/* Profile Section Container */
+.ProfileSection {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Introduction Block */
+.Profile-Introduction h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #0078D7;
+    margin-bottom: 10px;
+}
+
+.Profile-Introduction p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.Profile-Introduction h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #FF6B35;
+}
+
+/* Info Block */
+.Profile-Info p {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.Profile-Info strong {
+    color: #555;
+}
+
+.Profile-Info .aspNetLabel {
+    font-weight: bold;
+}
+
+.Profile-Info input[type="submit"],
+.Profile-Info input[type="button"],
+.Profile-Info button {
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .Profile-Info input[type="submit"]:hover,
+    .Profile-Info input[type="button"]:hover,
+    .Profile-Info button:hover {
+        background-color: #005A9E;
+    }
+
+/* Update Section */
+.Profile-Upadate p {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.Profile-Upadate label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.Profile-Upadate input[type="text"],
+.Profile-Upadate input[type="email"],
+.Profile-Upadate input[type="password"],
+.Profile-Upadate input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Buttons */
+.Profile-Upadate input[type="submit"],
+.Profile-Upadate input[type="button"],
+.Profile-Upadate button {
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .Profile-Upadate input[type="submit"]:hover,
+    .Profile-Upadate input[type="button"]:hover,
+    .Profile-Upadate button:hover {
+        background-color: #005A9E;
+    }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .ProfileSection {
+        padding: 20px;
+    }
+
+    .Profile-Introduction h1 {
+        font-size: 24px;
+    }
+
+    .Profile-Introduction h2 {
+        font-size: 20px;
+    }
+
+    .Profile-Upadate input,
+    .Profile-Upadate button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }

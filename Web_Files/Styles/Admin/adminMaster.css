@@ -1,0 +1,83 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#ContentPlaceHolder1 {
+    flex: 1;
+    padding: 30px;
+}
+
+.FooterSection {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 14px;
+}
+.header, .FooterSection {
+    background-color: #333333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header {
+    height: 20px 30px;
+}
+
+.NavigationMenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; 
+}
+
+.NavigationMenu a {
+    font-size: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.NavigationMenu a:hover {
+    color: #FF6B35;
+}
+
+.FooterSection a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+    .FooterSection a:hover {
+        color: #FF6B35;
+    }
+
+#lblFooterText {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+#lblFooterText:hover{
+    color: #FF6B35;
+}
+
+#imgLogoutBtn {
+    width: 60px;
+}
+
+    #imgLogoutBtn:hover {
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+    }
+

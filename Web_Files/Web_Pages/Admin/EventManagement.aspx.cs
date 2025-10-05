@@ -168,5 +168,10 @@ namespace EventManagementSystem.Web_Files.Web_Pages.Admin
             txtTime.Text = "";
             txtCapacity.Text = "";
         }
+
+        protected void gvEvents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

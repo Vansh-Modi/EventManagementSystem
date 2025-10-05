@@ -79,8 +79,12 @@
     <Content Include="Web_Files\Images\logo.png" />
     <Content Include="Web_Files\Images\logoBG.png" />
     <Content Include="Web_Files\Images\LogoutButton.png" />
+    <Content Include="Web_Files\Styles\Admin\adminDashboard.css" />
     <Content Include="Web_Files\Styles\Admin\adminLoginPage.css" />
+    <Content Include="Web_Files\Styles\Admin\adminMaster.css" />
     <Content Include="Web_Files\Styles\Admin\eventManagement.css" />
+    <Content Include="Web_Files\Styles\Admin\feedback.css" />
+    <Content Include="Web_Files\Styles\Admin\manageCategories.css" />
     <Content Include="Web_Files\Styles\Admin\reports.css" />
     <Content Include="Web_Files\Styles\Admin\settings.css" />
     <Content Include="Web_Files\Styles\Admin\userManagement.css" />
@@ -91,12 +95,12 @@
     <Content Include="Web_Files\Styles\Client\homePage.css" />
     <Content Include="Web_Files\Styles\Client\loginPage.css" />
     <Content Include="Web_Files\Styles\Client\profile.css" />
-    <Content Include="Web_Files\Styles\Client\registration.css" />
+    <Content Include="Web_Files\Styles\Client\sessionMaster.css" />
     <Content Include="Web_Files\Web_Pages\Admin\AdminDashboard.aspx" />
     <Content Include="Web_Files\Web_Pages\Admin\AdminLoginPage.aspx" />
     <Content Include="Web_Files\Web_Pages\Admin\EventManagement.aspx" />
     <Content Include="Web_Files\Web_Pages\Admin\Feedback.aspx" />
-    <Content Include="Web_Files\Web_Pages\Admin\ManageCategories.aspx" />
+    <Content Include="Web_Files\Web_Pages\Admin\ManageCategory.aspx" />
     <Content Include="Web_Files\Web_Pages\Admin\Reports.aspx" />
     <Content Include="Web_Files\Web_Pages\Admin\Settings.aspx" />
     <Content Include="Web_Files\Web_Pages\Admin\UserManagement.aspx" />
@@ -109,8 +113,10 @@
     <Content Include="Web_Files\Web_Pages\Client\Profile.aspx" />
     <Content Include="Web_Files\Web_Pages\HTML_Pages\Privacy.html" />
     <Content Include="Web_Files\Web_Pages\HTML_Pages\TnC.html" />
+    <Content Include="Web_Files\Web_Pages\Master_Page\index.css" />
     <Content Include="Web_Files\Web_Pages\Registration.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Web_Files\Web_Pages\registration.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -145,12 +151,12 @@
     <Compile Include="Web_Files\Web_Pages\Admin\Feedback.aspx.designer.cs">
       <DependentUpon>Feedback.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Web_Files\Web_Pages\Admin\ManageCategories.aspx.cs">
-      <DependentUpon>ManageCategories.aspx</DependentUpon>
+    <Compile Include="Web_Files\Web_Pages\Admin\ManageCategory.aspx.cs">
+      <DependentUpon>ManageCategory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Web_Files\Web_Pages\Admin\ManageCategories.aspx.designer.cs">
-      <DependentUpon>ManageCategories.aspx</DependentUpon>
+    <Compile Include="Web_Files\Web_Pages\Admin\ManageCategory.aspx.designer.cs">
+      <DependentUpon>ManageCategory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web_Files\Web_Pages\Admin\Reports.aspx.cs">
       <DependentUpon>Reports.aspx</DependentUpon>

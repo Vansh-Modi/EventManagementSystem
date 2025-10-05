@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace EventManagementSystem.Web_Files.Web_Pages
 {
@@ -68,11 +72,11 @@ namespace EventManagementSystem.Web_Files.Web_Pages
                 }
                 catch (Exception ex)
                 {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", $"alert('Error: {ex.Message}');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", $"alert('Error: {ex.Message}');", true);
+                }
             }
-        }
 
-        btnReset_Click(sender, e);
+            btnReset_Click(sender, e);
         }
 
         protected void btnReset_Click(object sender, EventArgs e)

@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace EventManagementSystem.Web_Files.Web_Pages.Admin
 {
-    public partial class ManageCategories : System.Web.UI.Page
+    public partial class ManageCategory : System.Web.UI.Page
     {
         SqlConnection conn;
         string strcon;
@@ -27,9 +27,9 @@ namespace EventManagementSystem.Web_Files.Web_Pages.Admin
         {
             if (!IsPostBack)
             {
-                if(Session["role"] == null || Session["role"].ToString() != "admin")
+                if (Session["AdminID"] == null)
                 {
-                    Response.Redirect("../Home.aspx");
+                    Response.Redirect("AdminLoginPage.aspx");
                     return;
                 }
                 LoadCategories();

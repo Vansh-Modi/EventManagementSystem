@@ -1,2 +1,116 @@
-﻿body {
+﻿/* Base Styles */
+body {
+    background-color: #F9F9F9;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Search List Container */
+.EventSearchList {
+    max-width: 960px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+    /* Search Controls */
+    .EventSearchList div {
+        margin-bottom: 15px;
+    }
+
+    .EventSearchList input[type="text"],
+    .EventSearchList select,
+    .EventSearchList .aspNetTextBox,
+    .EventSearchList .aspNetDropDown {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .EventSearchList input[type="submit"],
+    .EventSearchList button,
+    .EventSearchList .aspNetButton {
+        padding: 10px 20px;
+        background-color: #0078D7;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .EventSearchList input[type="submit"]:hover,
+        .EventSearchList button:hover,
+        .EventSearchList .aspNetButton:hover {
+            background-color: #005A9E;
+        }
+
+/* Event Card */
+.event-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+    .event-card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #0078D7;
+    }
+
+    .event-card p {
+        margin: 5px 0;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .event-card strong {
+        color: #555;
+    }
+
+/* View Details Button */
+.details-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #FF6B35;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+    .details-btn:hover {
+        background-color: #e85c28;
+    }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .EventSearchList {
+        padding: 20px;
+    }
+
+    .event-card {
+        padding: 15px;
+    }
+
+        .event-card h3 {
+            font-size: 18px;
+        }
+
+    .details-btn {
+        width: 100%;
+        text-align: center;
+    }
 }

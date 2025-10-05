@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace EventManagementSystem.Web_Pages.Web_Pages.Client
+namespace EventManagementSystem.Web_Files.Web_Pages.Client
 {
     public partial class Dashboard : System.Web.UI.Page
     {
@@ -25,7 +25,7 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
         protected void Page_Load(object sender, EventArgs e)
         {
             fnConnection();
-            if(Session["UserID"] == null)
+            if (Session["UserID"] == null)
             {
                 Response.Redirect("./LoginPage.aspx");
             }
@@ -116,7 +116,7 @@ namespace EventManagementSystem.Web_Pages.Web_Pages.Client
             {
                 lblStatusMessage.Text = "You haven’t registered for any events yet.";
             }
-            lblStatusMessage.Text = rows > 0 ? "Registration cancelled successfully." : 
+            lblStatusMessage.Text = rows > 0 ? "Registration cancelled successfully." :
                 "Cancellation failed.";
             fnBindRegisteredEvents();
         }

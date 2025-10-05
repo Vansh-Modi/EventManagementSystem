@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="Feedback | Eventra" Language="C#" MasterPageFile="~/Web_Files/Web_Pages/Master_Page/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="Feedback.aspx.cs" Inherits="EventManagementSystem.Web_Files.Web_Pages.Admin.Feedback" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="icon" type="image/png" href="/Web_Files/Images/logoBG.png" />
+    <link rel="stylesheet" type="text/css" href="../Master_Page/index.css" />
+    <link rel="stylesheet" type="text/css" href="../../Styles/Admin/feedback.css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -18,16 +19,19 @@
             <asp:ListItem>All</asp:ListItem>
             <asp:ListItem>Reviewed</asp:ListItem>
             <asp:ListItem>New</asp:ListItem>
-        </asp:DropDownList><br /><br />
+        </asp:DropDownList><br />
+        <br />
 
         Filter by Date Range:<br />
         From :
         <asp:TextBox ID="txtStartDate" runat="server" TextMode="date"></asp:TextBox>
         To :
-        <asp:TextBox ID="txtEndDate" runat="server" TextMode="date"></asp:TextBox><br /><br />
+        <asp:TextBox ID="txtEndDate" runat="server" TextMode="date"></asp:TextBox><br />
+        <br />
 
         Search by Keyword:<br />
-        <asp:TextBox ID="txtSearchKeyword" runat="server"></asp:TextBox><br /><br />
+        <asp:TextBox ID="txtSearchKeyword" runat="server"></asp:TextBox><br />
+        <br />
 
         <asp:Button ID="btnApplyFilters" runat="server" Text="Apply Filters" OnClick="btnApplyFilters_Click" /><br />
     </div>

@@ -6,24 +6,24 @@
     padding: 0;
 }
 
-.ReportGenerator {
+.HeaderSection {
     text-align: center;
     margin: 40px auto 20px;
 }
 
-    .ReportGenerator h1 {
+    .HeaderSection h1 {
         font-size: 28px;
         font-weight: 600;
         color: #0078D7;
     }
 
-    .ReportGenerator p {
+    .HeaderSection p {
         font-size: 16px;
         color: #555;
     }
 
-.ReportFilter {
-    max-width: 960px;
+.FilterPannel {
+    max-width: 800px;
     margin: 0 auto 40px;
     background-color: #ffffff;
     padding: 30px 40px;
@@ -31,35 +31,34 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-    .ReportFilter h3 {
-        font-size: 20px;
-        font-weight: 600;
+    .FilterPannel h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
         color: #0078D7;
-        margin-bottom: 10px;
     }
 
-    .ReportFilter p {
-        font-size: 15px;
-        margin-bottom: 15px;
+    .FilterPannel label,
+    .FilterPannel br {
+        display: block;
+        margin-bottom: 8px;
     }
 
-    .ReportFilter input[type="text"],
-    .ReportFilter input[type="date"],
-    .ReportFilter select,
-    .ReportFilter .aspNetTextBox,
-    .ReportFilter .aspNetDropDown {
+    .FilterPannel input[type="text"],
+    .FilterPannel input[type="date"],
+    .FilterPannel select,
+    .FilterPannel .aspNetTextBox,
+    .FilterPannel .aspNetDropDown {
         width: 100%;
         padding: 10px;
+        margin-bottom: 15px;
         font-size: 14px;
         border: 1px solid #ccc;
         border-radius: 4px;
-        margin-top: 5px;
-        margin-bottom: 15px;
     }
 
-    .ReportFilter input[type="submit"],
-    .ReportFilter button,
-    .ReportFilter .aspNetButton {
+    .FilterPannel input[type="submit"],
+    .FilterPannel button,
+    .FilterPannel .aspNetButton {
         padding: 10px 20px;
         background-color: #0078D7;
         color: white;
@@ -70,65 +69,59 @@
         transition: background-color 0.3s ease;
     }
 
-        .ReportFilter input[type="submit"]:hover,
-        .ReportFilter button:hover,
-        .ReportFilter .aspNetButton:hover {
+        .FilterPannel input[type="submit"]:hover,
+        .FilterPannel button:hover,
+        .FilterPannel .aspNetButton:hover {
             background-color: #005A9E;
         }
 
-    .ReportFilter .aspNetRadioButtonList {
-        margin-bottom: 20px;
-        font-size: 15px;
-    }
-
-.ReportView {
+.FeedbackCard {
     max-width: 960px;
     margin: 0 auto 40px;
 }
 
-    .ReportView .aspNetGridView {
-        width: 100%;
-        border-collapse: collapse;
-        font-family: 'Segoe UI', 'Roboto', sans-serif;
-    }
+.FeedbackGrid {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
 
-    .ReportView th,
-    .ReportView td {
+    .FeedbackGrid th,
+    .FeedbackGrid td {
         padding: 12px;
         border: 1px solid #ddd;
         text-align: left;
     }
 
-    .ReportView th {
+    .FeedbackGrid th {
         background-color: #0078D7;
         color: white;
         font-weight: 600;
     }
 
-    .ReportView td {
+    .FeedbackGrid td {
         font-size: 15px;
         color: #333;
     }
 
-    .ReportView tr:nth-child(even) {
+    .FeedbackGrid tr:nth-child(even) {
         background-color: #f2f2f2;
     }
 
-    .ReportView tr:hover {
+    .FeedbackGrid tr:hover {
         background-color: #e6f0ff;
         transition: background-color 0.3s ease;
     }
 
-.ExportReport {
+.UpdateStatus {
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
-    .ExportReport input[type="submit"],
-    .ExportReport button,
-    .ExportReport .aspNetButton {
+    .UpdateStatus input[type="submit"],
+    .UpdateStatus button,
+    .UpdateStatus .aspNetButton {
         padding: 10px 20px;
-        margin: 0 10px;
         background-color: #28A745;
         color: white;
         border: none;
@@ -138,53 +131,45 @@
         transition: background-color 0.3s ease;
     }
 
-        .ExportReport input[type="submit"]:hover,
-        .ExportReport button:hover,
-        .ExportReport .aspNetButton:hover {
+        .UpdateStatus input[type="submit"]:hover,
+        .UpdateStatus button:hover,
+        .UpdateStatus .aspNetButton:hover {
             background-color: #218838;
         }
 
-.ReportSummary {
-    max-width: 960px;
-    margin: 0 auto 60px;
+.FooterSection {
     text-align: center;
+    margin-bottom: 60px;
 }
 
-    .ReportSummary h2 {
-        font-size: 22px;
-        font-weight: 600;
+    .FooterSection h3 {
+        font-size: 18px;
+        font-weight: 500;
         color: #0078D7;
-        margin-bottom: 10px;
-    }
-
-    .ReportSummary .aspNetLabel {
-        font-size: 16px;
-        color: #555;
     }
 
 @media screen and (max-width: 768px) {
-    .ReportFilter,
-    .ReportView,
-    .ReportSummary {
+    .FilterPannel,
+    .FeedbackCard {
         padding: 20px;
     }
 
-    .ReportGenerator h1 {
+    .HeaderSection h1 {
         font-size: 24px;
     }
 
-    .ReportFilter h3 {
-        font-size: 18px;
+    .FilterPannel h2 {
+        font-size: 20px;
     }
 
-    .ReportView th,
-    .ReportView td {
+    .FeedbackGrid th,
+    .FeedbackGrid td {
         font-size: 14px;
         padding: 8px;
     }
 
-    .ExportReport input,
-    .ExportReport button {
+    .UpdateStatus input,
+    .UpdateStatus button {
         width: 100%;
         margin-top: 10px;
     }

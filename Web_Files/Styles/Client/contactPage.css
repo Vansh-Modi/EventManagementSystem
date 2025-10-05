@@ -1,2 +1,115 @@
 ﻿body {
+    background-color: #F9F9F9;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    color: #333;
+}
+
+.ContactSection {
+    max-width: 800px;
+    margin: 40px auto 30px;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+    .ContactSection h2 {
+        font-size: 26px;
+        font-weight: 600;
+        color: #0078D7;
+        margin-bottom: 20px;
+    }
+
+    .ContactSection p {
+        font-size: 16px;
+        margin-bottom: 12px;
+        line-height: 1.6;
+    }
+
+.FeedbackSection {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+    .FeedbackSection h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #0078D7;
+        margin-bottom: 20px;
+    }
+
+    .FeedbackSection table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .FeedbackSection td {
+        padding: 10px;
+        vertical-align: top;
+    }
+
+    .FeedbackSection textarea,
+    .FeedbackSection input[type="text"],
+    .FeedbackSection .aspNetTextBox {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+    }
+
+    .FeedbackSection input[type="submit"],
+    .FeedbackSection input[type="button"],
+    .FeedbackSection button {
+        padding: 10px 20px;
+        background-color: #0078D7;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .FeedbackSection input[type="submit"]:hover,
+        .FeedbackSection input[type="button"]:hover,
+        .FeedbackSection button:hover {
+            background-color: #005A9E;
+        }
+
+    .FeedbackSection .aspNetLabel {
+        color: #DC3545;
+        font-size: 14px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .lblMessage, span{
+        font-weight: 600;
+    }
+
+@media screen and (max-width: 768px) {
+    .ContactSection,
+    .FeedbackSection {
+        padding: 20px;
+    }
+
+        .ContactSection h2,
+        .FeedbackSection h2 {
+            font-size: 22px;
+        }
+
+        .FeedbackSection td {
+            display: block;
+            width: 100%;
+        }
+
+            .FeedbackSection td:last-child {
+                text-align: left;
+            }
 }

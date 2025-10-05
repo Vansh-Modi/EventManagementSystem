@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Web_Files/Web_Pages/Master_Page/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="UserManagement.aspx.cs" Inherits="EventManagementSystem.Web_Files.Web_Pages.Admin.UserManagement" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link rel="stylesheet" type="text/css" href="../Master_Page/index.css" />
+    <link rel="stylesheet" type="text/css" href="../../Styles/Admin/userManagement.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="MainContainer">
@@ -9,7 +11,7 @@
         <table>
             <tr>
                 <td>Name:</td>
-                <td><asp:TextBox ID="txtName" runat="server" TextMode="SingleLine" /></td></td>
+                <td><asp:TextBox ID="txtName" runat="server" TextMode="SingleLine" /></td>
                 </tr>
             <tr>
                 <td>Email: </td>
@@ -39,7 +41,8 @@
                 </td>
             </tr>
         </table>
-        <asp:GridView ID="gvUsers" runat="server" AutoGenerateColumns="False" DataKeyNames="UserID"
+        <div class="gvUser">
+        <asp:GridView ID="gvUsers" CssClass="gvUser" runat="server" AutoGenerateColumns="False" DataKeyNames="UserID"
             OnRowEditing="gvUsers_RowEditing" OnRowDeleting="gvUsers_RowDeleting" >
             <Columns>
                 <asp:BoundField DataField="UserID" HeaderText="ID" ReadOnly="True" />
@@ -57,5 +60,6 @@
             </asp:TemplateField>
             </Columns>
         </asp:GridView>
+            </div>
     </div>
 </asp:Content>

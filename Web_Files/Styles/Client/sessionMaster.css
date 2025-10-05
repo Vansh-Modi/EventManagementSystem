@@ -1,0 +1,106 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    background-color: #F9F9F9;
+    color: #333;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#ContentPlaceHolder1 {
+    flex: 1;
+    padding: 30px;
+}
+
+.header {
+    background-color: #333333;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.NavigationMenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+    .NavigationMenu a {
+        font-size: 18px;
+        color: #FFFFFF;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        display: inline-block;
+    }
+
+        .NavigationMenu a:hover {
+            color: #FF6B35;
+        }
+
+.LogOutBtn {
+    text-align: right;
+}
+
+#imgLogoutBtn {
+    width: 60px;
+    cursor: pointer;
+}
+
+    #imgLogoutBtn:hover {
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+    }
+
+.FooterSection {
+    background-color: #333333;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+    .FooterSection a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+        .FooterSection a:hover {
+            color: #FF6B35;
+        }
+
+#lblFooterText {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+    #lblFooterText:hover {
+        color: #FF6B35;
+    }
+
+@media screen and (max-width: 768px) {
+    .NavigationMenu {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .LogOutBtn {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #ContentPlaceHolder1 {
+        padding: 20px;
+    }
+}

@@ -1,2 +1,176 @@
 ﻿body {
+    background-color: #F9F9F9;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.Hero {
+    max-width: 960px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.EventBanner img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.EventLable {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #0078D7;
+}
+
+.EventSearch {
+    margin-top: 20px;
+}
+
+    .EventSearch .aspNetButton,
+    .EventSearch input[type="submit"],
+    .EventSearch button {
+        padding: 10px 20px;
+        background-color: #0078D7;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .EventSearch .aspNetButton:hover,
+        .EventSearch input[type="submit"]:hover,
+        .EventSearch button:hover {
+            background-color: #005A9E;
+        }
+
+.event-grid {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+    .event-grid th,
+    .event-grid td {
+        padding: 12px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    .event-grid th {
+        background-color: #0078D7;
+        color: white;
+        font-weight: 600;
+    }
+
+    .event-grid td {
+        font-size: 15px;
+        color: #333;
+    }
+
+    .event-grid tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .event-grid tr:hover {
+        background-color: #e6f0ff;
+        transition: background-color 0.3s ease;
+    }
+
+    .event-grid a {
+        color: #FF6B35;
+        text-decoration: none;
+    }
+
+        .event-grid a:hover {
+            text-decoration: underline;
+        }
+
+.SearchSection {
+    max-width: 960px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+    .SearchSection input[type="text"],
+    .SearchSection select,
+    .SearchSection .aspNetTextBox,
+    .SearchSection .aspNetDropDown {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    .SearchSection input[type="submit"],
+    .SearchSection button,
+    .SearchSection .aspNetButton {
+        padding: 10px 20px;
+        background-color: #0078D7;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .SearchSection input[type="submit"]:hover,
+        .SearchSection button:hover,
+        .SearchSection .aspNetButton:hover {
+            background-color: #005A9E;
+        }
+
+.AboutSection {
+    max-width: 960px;
+    margin: 40px auto 60px;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+@media screen and (max-width: 768px) {
+    .Hero,
+    .EventSection,
+    .SearchSection,
+    .AboutSection {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .EventLable {
+        font-size: 20px;
+    }
+
+    .event-grid th,
+    .event-grid td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .SearchSection input[type="text"],
+    .SearchSection select {
+        width: 100%;
+    }
+
+    .SearchSection input[type="submit"],
+    .SearchSection button {
+        width: 100%;
+        margin-top: 10px;
+    }
 }

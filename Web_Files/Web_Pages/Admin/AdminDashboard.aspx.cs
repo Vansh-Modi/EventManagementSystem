@@ -19,7 +19,7 @@ namespace EventManagementSystem.Web_Files.Web_Pages.Admin
             conn.Open();
         }
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {   
             if (Session["AdminID"] == null || string.IsNullOrEmpty(Session["AdminID"].ToString()))
             {
                 Response.Redirect("./AdminLoginPage.aspx");
